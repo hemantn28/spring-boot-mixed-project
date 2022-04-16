@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class PathVariableController {
 
     @RequestMapping("/hello/{name}")
-public String msg(@PathVariable String name){
+    public String msg(@PathVariable String name){
     return "Welcome to Path Variable."+name;
 }
-@RequestMapping("/check_age/{age}")
-public String checkAge(@PathVariable int age){
+
+
+    @RequestMapping("/check_age/{age}")
+    public String checkAge(@PathVariable int age){
         if (age>18){
             return "You are eligible for voting";
         }
@@ -20,8 +22,8 @@ public String checkAge(@PathVariable int age){
             return "you are not eligible for voting";
         }
 }
-@RequestMapping("/your_salary/{salary}")
-public String checkSalary(@PathVariable double salary){
+    @RequestMapping("/your_salary/{salary}")
+    public String checkSalary(@PathVariable double salary){
 
         if (salary>90000.00){
             return "your salary is good.";
